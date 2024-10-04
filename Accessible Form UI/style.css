@@ -1,0 +1,65 @@
+/* From Uiverse.io by Ratinax */ 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: not-allowed;
+    scale: 0.7;
+  }
+  
+  .central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0.5em 1em 1em cyan,
+      -0.5em 0.5em 1em lime,
+      0.5em -0.5em 1em white,
+      -0.5em -0.5em 1em yellow;
+  }
+  
+  .external-shadow {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0.5em 0.5em 3em cyan,
+      -0.5em 0.5em 3em lime,
+      0.5em -0.5em 3em white,
+      -0.5em -0.5em 3em yellow;
+    z-index: 999;
+    animation: rotate 3s linear infinite;
+    background-color: #ade3da;
+  }
+  
+  .intern {
+    position: absolute;
+    color: white;
+    z-index: 9999;
+  }
+  
+  .intern::before {
+    content: "60%";
+    animation: percent 2s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

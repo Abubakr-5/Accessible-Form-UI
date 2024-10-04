@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Accessible Form UI</title>
+</head>
+
+<body class="bg-gray-200" style="font-family: 'Roboto', sans-serif;">
+    <div class="flex max-w-2xl m-16 p-8 mx-auto max-h-3xl bg-white rounded-xl shadow-xl">
+        <div class="w-1/2 flex flex-col">
+            <div class="my-3">
+                <label class="text-xl" for="name">Full Name</label><br>
+                <input id="name" type="text" placeholder="John Doe" class="border-2 p-1.5 w-full rounded-lg border-gray-500"><br>
+                <p class="hidden error-message"></p>
+            </div>
+            <div class="my-3">
+                <label class="text-xl" for="email">Email</label><br>
+                <input id="email" type="email" placeholder="john@example.com" class="border-2 p-1.5 w-full  rounded-lg border-red-500"><br>
+                <p class="error-message text-red-500">This is a sample error message</p>
+            </div>
+            <div class="my-3">
+                <label class="text-xl" for="password">Enter Password</label><br>
+                <div class="flex items-center relative">
+                    <input id="password" type="text" placeholder="xxxxxxxx" class="border-2 p-1.5 w-full  rounded-lg border-gray-500">
+                    <button class="absolute flex items-center right-0 p-2">
+                        <box-icon type='solid' name='low-vision'></box-icon>
+                    </button>
+                </div>
+                <p class="hidden error-message"></p>
+            </div>
+            <div class="my-3">
+                <label class="text-xl" for="confirm">Confirm Password</label><br>
+                <div class="flex items-center relative">
+                    <input id="confirm" type="text" placeholder="xxxxxxxx" class="border-2 p-1.5 w-full  rounded-lg border-gray-500">
+                    <button class="absolute flex items-center right-0 p-2">
+                        <box-icon type='solid' name='low-vision'></box-icon>
+                    </button>
+                </div>
+                <p class="hidden error-message"></p>
+            </div>
+            <button class="my-4 bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-xl">
+                Update Profile
+            </button>
+        </div>
+        <div class="w-1/2 pl-8 flex flex-col justify-center items-center">
+            <div class="my-2">
+                <div class="loader">
+                    <div class="intern text-3xl text-black">
+                    </div>
+                <div class="external-shadow">
+                    <div class="central">
+                    </div>
+                </div>
+                </div>
+                <h2 class="text-lg mt-2">Profile Completeness</h2>
+            </div>
+            <div class="h-full bg-gray-200 m-4 p-6 rounded-xl">
+                <p class="p-0.5 line-through text-gray-400">Create account</p>
+                <p class="p-0.5 line-through text-gray-400">Update progress</p>
+                <p class="p-0.5 line-through text-gray-400">Setup profile picture</p>
+                <p class="p-0.5">Complete first project</p>
+                <p class="p-0.5">Invite friends</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
